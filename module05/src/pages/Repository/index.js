@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, ActivityIndicator } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import api from '../../services/api';
 
+import api from '../../services/api';
 import Container from '../../components/Container';
 
 import { Loading, Owner, IssueList } from './styles';
@@ -54,6 +54,7 @@ export default class Repository extends Component {
 
     return (
       <Container>
+        <ActivityIndicator size="large" color="#0000ff" />
         <Owner>
           <Link to="/">Voltar aos repositórios</Link>
           <img
